@@ -2,9 +2,10 @@
   "name": "f8_nodejs_blog",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "start": "nodemon --inspect index.js localhost 3000",
+    "start": "nodemon --inspect src/index.js localhost 3000",
+    "watch" : "node-sass -w src/resources/scss/ -o src/public/css/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,9 +19,14 @@
   },
   "homepage": "https://github.com/KaioShin12c/F8_NodeJS_Blog#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.1",
+    "path": "^0.12.7"
   },
   "devDependencies": {
+    "handlebars": "^4.7.7",
+    "morgan": "^1.10.0",
+    "node-sass": "^5.0.0",
     "nodemon": "^2.0.7"
   }
 }
